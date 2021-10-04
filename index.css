@@ -91,15 +91,20 @@ main {
   height: 50px;
   width: 150px;
   border-radius: 40px;
-  border: none;
+  /* border: none; puedes reemplazar los border por sombras */
   margin-top: 20px;
   cursor: pointer;
+  /* Es preferente agregar una animación para los efectos de :hover, :focus, etc.*/
+  transition: color .5s ease, box-shadow .5s ease, background-color .5s ease; 
+  /*la sintaxis es => transition: 'propiedad que cambia' 'tiempo de duracion' cubic bezier() para esta ultima recomiento esta pag(https://cubic-bezier.com/)*/
+  box-shadow: 0 0 0 0 transparent;
+  box-sizing: border-box;
 }
 
 .content_container button:hover {
   color: white;
-  border: white 2px solid;
   background-color: transparent;
+  box-shadow: 0 0 0 2px white
 }
 
 .btn1 {
